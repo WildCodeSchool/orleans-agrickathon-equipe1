@@ -30,8 +30,6 @@
     // Initialisation de la carte avec les options
     var map = new google.maps.Map(document.getElementById("map"), optionsGmaps);
 
-
-
     if(navigator.geolocation) {
 
         // Fonction de callback en cas de succès
@@ -54,7 +52,6 @@
             });
 
             map.panTo(latlng);
-
         }
 
         // Fonction de callback en cas d’erreur
