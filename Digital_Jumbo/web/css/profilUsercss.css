@@ -25,3 +25,18 @@ body {
     color: white;
     margin-top: 2%;
 }
+
+.bas_de_page{
+    background-color: #98CBBE;
+
+}
+
+#infobulle{
+    height: 200px;
+    width: 300px;
+}
+
+.logos{
+    height: 50px;
+    width: 50px;
+}

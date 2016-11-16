@@ -1,17 +1,16 @@
-{% extends 'base.html.twig' %}
+{% extends 'layoutProfilUser.html.twig' %}
 {% block stylesheets %}
     {{ parent() }}
     
 {% endblock %}
 {% block body %}
-<!-- Un élément HTML pour recueillir l’affichage -->
-<div id="maposition"></div>
 
 <!-- Un élément HTML pour recueillir la carte -->
-<div id="map" style="width:640px;height:480px"></div>
+
 
 <!-- Chargement de l'API Google maps -->
-
+<div class="container-fluid">
+    <div id="map" style="width:100%;height:50vw" class="img-responsive"></div>
 <script>
     // Note: This example requires that you consent to location sharing when
     // prompted by your browser. If you see the error "The Geolocation service
@@ -37,10 +36,8 @@
                 position: ltlng[i],
                 title : "cliquez-moi !"
             });
-            var contentString = '<h3>La ferme de Puiseaux</h3>'+
-                    '<i class="fa fa-home fa-3x icone" aria-hidden="true"></i>'+
-                            '<i class="fa fa-users fa-3x icone" aria-hidden="true"></i>'+
-                            '<img src="cow-silhouette-2-01(1).png" class="img-responsive">'
+
+
 
             ;
 
@@ -50,9 +47,7 @@
 
 
                     infowindow = new google.maps.InfoWindow({
-                        content: contentString,
-                        Width: 200,
-                        Height: 200
+                        content: '<div id=infobulle>'+'<img src="{{ asset('images/test-01.png') }} class="img-responsive">'+'</div>',
 
                     });
 
@@ -76,7 +71,8 @@
                 marker = new google.maps.Marker({
                     map: map,
                     position: pos,
-                    icon: iconBase + 'greenMarker.png'
+                    icon: iconBase + 'library_maps.png'
+
 
                 });
 
@@ -103,5 +99,12 @@
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTOZi5eTjC8myzcVmB7PNSxx02zhXdB8Q&callback=initMap">
 </script>
+
+</div>
+
+    {% block footer %}
+        {{ parent() }}
+    {% endblock %}
+
 
 {% endblock %}
