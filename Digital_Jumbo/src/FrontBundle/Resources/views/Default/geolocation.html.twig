@@ -1,4 +1,4 @@
-{% extends 'layoutProfilAgri.html.twig' %}
+{% extends 'layoutProfilUser.html.twig' %}
 {% block stylesheets %}
     {{ parent() }}
     
@@ -10,9 +10,7 @@
 
 <!-- Chargement de l'API Google maps -->
 <div class="container-fluid">
-    <div class="row">
-<div class="col-xs-offset-2 col-xs-8">
-    <div id="map" style="width:auto;height:800px" class="img-responsive"></div>
+    <div id="map" style="width:100%;height:50vw" class="img-responsive"></div>
 <script>
     // Note: This example requires that you consent to location sharing when
     // prompted by your browser. If you see the error "The Geolocation service
@@ -38,10 +36,8 @@
                 position: ltlng[i],
                 title : "cliquez-moi !"
             });
-            var contentString = '<h3>La ferme de Puiseaux</h3>'+
-                    '<i class="fa fa-home fa-3x icone" aria-hidden="true"></i>'+
-                            '<i class="fa fa-users fa-3x icone" aria-hidden="true"></i>'+
-                            '<img src="cow-silhouette-2-01(1).png" class="img-responsive">'
+
+
 
             ;
 
@@ -51,9 +47,7 @@
 
 
                     infowindow = new google.maps.InfoWindow({
-                        content: contentString,
-                        Width: 200,
-                        Height: 200
+                        content: '<div id=infobulle>'+'<img src="{{ asset('images/test-01.png') }} class="img-responsive">'+'</div>',
 
                     });
 
@@ -105,8 +99,7 @@
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTOZi5eTjC8myzcVmB7PNSxx02zhXdB8Q&callback=initMap">
 </script>
-</div>
-    </div>
+
 </div>
 
     {% block footer %}

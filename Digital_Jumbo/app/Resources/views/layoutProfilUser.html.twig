@@ -13,15 +13,28 @@
     {% endblock %}
 
     {% block footer %}
-        <nav class="navbar navbar-default .navbar-fixed-bottom">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#">
-                        <img alt="Brand" src="...">
-                    </a>
-                </div>
-            </div>
-        </nav>
+       <div class="container-fluid">
+           <div class="row">
+               <div class="col-xs-12 bas_de_page">
+                  <div class="col-xs-2">
+                   <img src="{{ asset('images/recherche footer-01.png') }}" alt="" class="img-responsive logos">
+                  </div>
+                   <div class="col-xs-2">
+                   <img src="{{ asset('images/autour-01.png') }}" alt="" class="img-responsive logos">
+                   </div>
+                   <div class="col-xs-2">
+                   <img src="{{ asset('images/calendrier footer-01.png') }}" alt="" class="img-responsive logos">
+                   </div>
+                   <div class="col-xs-2">
+                   <img src="{{ asset('images/love footer-01.png') }}" alt="" class="img-responsive logos">
+                   </div>
+               <div class="col-xs-3">
+
+                           <img src="{{ asset('images/LOGO FINAL copie-01.png') }}" alt="" class="img-responsive">
+               </div>
+               </div>
+           </div>
+       </div>
     {% endblock %}
 
 {% endblock %}
