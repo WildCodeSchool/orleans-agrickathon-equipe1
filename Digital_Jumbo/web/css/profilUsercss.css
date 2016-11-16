@@ -1,7 +1,27 @@
 .imgProfilUser {
-    width: 10%;
+    width: 40%;
+    margin-bottom: 10%;
 }
 
-.pageUser {
-    background-color: #56B7A1;
+body {
+    background-color: #98CBBE;
+    background-size: 100%;
+}
+
+
+.align {
+    border: dashed white;
+    text-align: center;
+    margin: 1%;
+}
+
+.titreBouton {
+    color: white;
+}
+
+.fa-5x{
+    font-size: 5em;
+    text-align: center;
+    color: white;
+    margin-top: 2%;
 }
