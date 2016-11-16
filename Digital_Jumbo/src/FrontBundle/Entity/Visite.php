@@ -3,6 +3,7 @@
 namespace FrontBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Visite
@@ -120,5 +121,48 @@ class Visite
     public function getToutPublic()
     {
         return $this->toutPublic;
+    }
+
+    /**
+     * @ORM\OneToMany(targetEntity="Site", mappedBy="type_visite")
+     */
+    private $visites;
+
+    public function __construct()
+    {
+        $this->visites = new ArrayCollection();
+    }
+
+    /**
+     * Add visites
+     *
+     * @param \FrontBundle\Entity\Site $visites
+     * @return Visite
+     */
+    public function addVisite(\FrontBundle\Entity\Site $visites)
+    {
+        $this->visites[] = $visites;
+
+        return $this;
+    }
+
+    /**
+     * Remove visites
+     *
+     * @param \FrontBundle\Entity\Site $visites
+     */
+    public function removeVisite(\FrontBundle\Entity\Site $visites)
+    {
+        $this->visites->removeElement($visites);
+    }
+
+    /**
+     * Get visites
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getVisites()
+    {
+        return $this->visites;
     }
 }

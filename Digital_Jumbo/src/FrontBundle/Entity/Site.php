@@ -77,12 +77,104 @@ class Site
      */
     private $note;
 
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="latitude", type="float")
+     */
+    private $latitude;
 
+    /**
+     * @return mixed
+     */
+    public function getLatitude()
+    {
+        return $this->latitude;
+    }
+
+    /**
+     * @param mixed $latitude
+     */
+    public function setLatitude($latitude)
+    {
+        $this->latitude = $latitude;
+    }
+
+    /**
+     * @return float
+     */
+    public function getLongitude(): float
+    {
+        return $this->longitude;
+    }
+
+    /**
+     * @param float $longitude
+     */
+    public function setLongitude(float $longitude)
+    {
+        $this->longitude = $longitude;
+    }
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="longitude", type="float")
+     */
+    private $longitude;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Visite", inversedBy="visites")
+     * @ORM\JoinColumn(name="type_visite_id", referencedColumnName="id")
+     */
+    private $type_visite;
+
+    /**
+     * @return mixed
+     */
+    public function getTypeVisite()
+    {
+        return $this->type_visite;
+    }
+
+    /**
+     * @param mixed $type_visite
+     */
+    public function setTypeVisite($type_visite)
+    {
+        $this->type_visite = $type_visite;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getReservation()
+    {
+        return $this->reservation;
+    }
+
+    /**
+     * @param mixed $reservation
+     */
+    public function setReservation($reservation)
+    {
+        $this->reservation = $reservation;
+    }
+
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Reservation", inversedBy="reservations")
+     * @ORM\JoinColumn(name="reservation_id", referencedColumnName="id")
+     */
+
+    private $reservation;
     /**
      * Get id
      *
      * @return integer 
      */
+
+
     public function getId()
     {
         return $this->id;
@@ -270,5 +362,34 @@ class Site
     public function getNote()
     {
         return $this->note;
+    }
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Ouverture", inversedBy="ouvertures")
+     * @ORM\JoinColumn(name="ouverture_id", referencedColumnName="id")
+     */
+    private $ouverture;
+
+    /**
+     * Set ouverture
+     *
+     * @param \FrontBundle\Entity\Ouverture $ouverture
+     * @return Site
+     */
+    public function setOuverture(\FrontBundle\Entity\Ouverture $ouverture = null)
+    {
+        $this->ouverture = $ouverture;
+
+        return $this;
+    }
+
+    /**
+     * Get ouverture
+     *
+     * @return \FrontBundle\Entity\Ouverture 
+     */
+    public function getOuverture()
+    {
+        return $this->ouverture;
     }
 }

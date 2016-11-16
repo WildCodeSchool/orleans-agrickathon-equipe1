@@ -22,16 +22,16 @@ class Ouverture
     private $id;
 
     /**
-     * @var \DateTime
+     * @var string
      *
-     * @ORM\Column(name="jour_debut", type="date")
+     * @ORM\Column(name="jour_debut", type="string", length=255)
      */
     private $jourDebut;
 
     /**
-     * @var \DateTime
+     * @var string
      *
-     * @ORM\Column(name="jour_fin", type="date")
+     * @ORM\Column(name="jour_fin", type="string", length=255)
      */
     private $jourFin;
 
@@ -63,7 +63,7 @@ class Ouverture
     /**
      * Set jourDebut
      *
-     * @param \DateTime $jourDebut
+     * @param string $jourDebut
      * @return Ouverture
      */
     public function setJourDebut($jourDebut)
@@ -76,7 +76,7 @@ class Ouverture
     /**
      * Get jourDebut
      *
-     * @return \DateTime 
+     * @return string
      */
     public function getJourDebut()
     {
@@ -86,7 +86,7 @@ class Ouverture
     /**
      * Set jourFin
      *
-     * @param \DateTime $jourFin
+     * @param string $jourFin
      * @return Ouverture
      */
     public function setJourFin($jourFin)
@@ -99,7 +99,7 @@ class Ouverture
     /**
      * Get jourFin
      *
-     * @return \DateTime 
+     * @return string
      */
     public function getJourFin()
     {
@@ -109,7 +109,7 @@ class Ouverture
     /**
      * Set heureDebut
      *
-     * @param \DateTime $heureDebut
+     * @param string $heureDebut
      * @return Ouverture
      */
     public function setHeureDebut($heureDebut)
