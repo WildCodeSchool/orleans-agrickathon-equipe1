@@ -36,18 +36,20 @@
         for (var i = 0; i <= ltlng.length; i++) {
             marker = new google.maps.Marker({
                 map: map,
-                position: ltlng[i]
+                position: ltlng[i],
+                title : "cliquez-moi !"
             });
 
             (function (i, marker) {
 
                 google.maps.event.addListener(marker, 'click', function () {
 
-                    if (!infowindow) {
-                        infowindow = new google.maps.InfoWindow();
-                    }
 
-                    infowindow.setContent("Message" + i);
+                    infowindow = new google.maps.InfoWindow();
+
+                    infowindow.setContent();
+
+
 
                     infowindow.open(map, marker);
 
