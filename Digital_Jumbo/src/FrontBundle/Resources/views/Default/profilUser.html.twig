@@ -8,7 +8,7 @@
             </div>
             <div class="row">
                 <div class="col-xs-5 align carre">
-                    <img src="{{ asset('images/recherchefooter-01.png') }}" class="img-responsive imgCarre center-block">
+                    <a href=""><img src="{{ asset('images/recherchefooter-01.png') }}" class="img-responsive imgCarre center-block"></a>
                     <p class="titreBouton">Rechercher</p>
                 </div>
                 <div class="col-xs-5 align carre">
@@ -20,13 +20,18 @@
             </div>
             <div class="row">
                 <div class="col-xs-5 align carre">
-                    <img src="{{ asset('images/calendrierfooter-01.png') }}" class="img-responsive imgCarre center-block">
+                    <a href=""><img src="{{ asset('images/calendrierfooter-01.png') }}" class="img-responsive imgCarre center-block"></a>
                     <p class="titreBouton">Mon calendrier</p>
                 </div>
                 <div class="col-xs-5 align carre">
-                    <img src="{{ asset('images/lovefooter-01.png') }}" class="img-responsive imgCarre center-block">
+                    <a href=""><img src="{{ asset('images/lovefooter-01.png') }}" class="img-responsive imgCarre center-block"></a>
                     <p class="titreBouton">Mes favoris</p>
                 </div>
             </div>
         </div>
+{% endblock %}
+{% block footer %}
+    <div class="col-xs-offset-2 col-xs-8">
+    <a href="{{ path('user') }}"><img src="{{ asset('images/LOGO FINAL copie-01.png') }}" alt="" class="img-responsive logo_marque"></a>
+    </div>
 {% endblock %}
