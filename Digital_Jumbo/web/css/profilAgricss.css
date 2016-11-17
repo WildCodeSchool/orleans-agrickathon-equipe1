@@ -4,4 +4,23 @@
 
 .linkAgri {
     color: #0f0f0f;
+    margin-top: 5%;
+}
+
+.picto {
+    margin-bottom: 5%;
+}
+
+.presAgri {
+    margin-top: 5%;
+}
+
+h2 {
+    margin-bottom: 5%;
+}
+
+.bouton {
+    display: block;
+    text-align: center;
+    margin-top: 5%;
 }
