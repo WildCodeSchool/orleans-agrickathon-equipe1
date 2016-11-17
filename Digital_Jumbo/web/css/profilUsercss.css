@@ -1,6 +1,6 @@
 .imgProfilUser {
     width: 40%;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
 
 body {
@@ -10,21 +10,13 @@ body {
 
 
 .align {
-    border: dashed white;
     text-align: center;
-    margin: 1%;
 }
 
 .titreBouton {
     color: white;
 }
 
-.fa-5x{
-    font-size: 5em;
-    text-align: center;
-    color: white;
-    margin-top: 2%;
-}
 
 .bas_de_page{
     background-color: #98CBBE;
@@ -39,4 +31,21 @@ body {
 .logos{
     height: 50px;
     width: 50px;
+}
+
+.carre {
+    margin: 5%;
+    margin-left: 12%;
+    width: 150px;
+    height: 150px;
+    border: dashed white;
+}
+
+.imgCarre {
+    margin-top: 30%;
+    width: 40%;
+}
+
+.autour:hover {
+    text-decoration: none;
 }
