@@ -2,10 +2,12 @@
 {% block stylesheets %}
     {{ parent() }}
     <link rel="stylesheet" type="text/css" href="{{  asset('css/profilAgricss.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{  asset('css/headercss.css')}}">
 {% endblock %}
 
 {% block body %}
     {% block header %}
+        {{ include('FrontBundle:Default:header.html.twig') }}
     {% endblock %}
 
     {% block profilAgri %}

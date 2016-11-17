@@ -6,6 +6,7 @@
 
 {% block body %}
     {% block header %}
+        {{ include('FrontBundle:Default:header.html.twig') }}
     {% endblock %}
 
     {% block profilUser %}
@@ -13,22 +14,7 @@
     {% endblock %}
 
     {% block footer %}
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-xs-offset-7 col-xs-1">
-            <a href=""><img src="{{ asset('images/calendrierfooter-01.png') }}" alt="" class="img-responsive logos_footer"></a>
-        </div>
-        <div class="col-xs-1">
-            <a href=""><img src="{{ asset('images/recherchefooter-01.png') }}" alt="" class="img-responsive logos_footer"></a>
-        </div>
-        <div class="col-xs-1">
-            <a href=""><img src="{{ asset('images/lovefooter-01.png') }}" alt="" class="img-responsive logos_footer"></a>
-        </div>
-        <div class="col-xs-2">
-            <a href=""><img src="{{ asset('images/LOGO FINAL copie-01.png') }}" alt="" class="img-responsive logos_footer"></a>
-        </div>
-    </div>
-</div>
+
     {% endblock %}
 
 {% endblock %}

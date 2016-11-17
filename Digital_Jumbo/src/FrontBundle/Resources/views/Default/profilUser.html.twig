@@ -1,33 +1,32 @@
 {% extends 'layoutProfilUser.html.twig' %}
-
 {% block profilUser %}
-<div class="container-fluid pageUser">
-    <div class="row">
-        <div class="col-lg-12">
-            <img src="{{ asset('images/valeriecircle.png') }}" class="img-responsive imgProfilUser center-block">
+        <div class="container-fluid pageUser">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img src="{{ asset('images/valeriecircle.png') }}" class="img-responsive imgProfilUser center-block">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-5 align carre">
+                    <img src="{{ asset('images/recherchefooter-01.png') }}" class="img-responsive imgCarre center-block">
+                    <p class="titreBouton">Rechercher</p>
+                </div>
+                <div class="col-xs-5 align carre">
+                    <a href="map" class="autour" title="Trouver un site près de chez moi">
+                    <img src="{{ asset('images/autour-01.png') }}" class="img-responsive imgCarre center-block">
+                    <p class="titreBouton">Autour de moi</p>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-5 align carre">
+                    <img src="{{ asset('images/calendrierfooter-01.png') }}" class="img-responsive imgCarre center-block">
+                    <p class="titreBouton">Mon calendrier</p>
+                </div>
+                <div class="col-xs-5 align carre">
+                    <img src="{{ asset('images/lovefooter-01.png') }}" class="img-responsive imgCarre center-block">
+                    <p class="titreBouton">Mes favoris</p>
+                </div>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-5 align carre">
-            <img src="{{ asset('images/recherchefooter-01.png') }}" class="img-responsive imgCarre center-block">
-            <p class="titreBouton">Rechercher</p>
-        </div>
-        <div class="col-xs-5 align carre">
-            <a href="map" class="autour" title="Trouver un site près de chez moi">
-            <img src="{{ asset('images/autour-01.png') }}" class="img-responsive imgCarre center-block">
-            <p class="titreBouton">Autour de moi</p>
-            </a>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-5 align carre">
-            <img src="{{ asset('images/calendrierfooter-01.png') }}" class="img-responsive imgCarre center-block">
-            <p class="titreBouton">Mon calendrier</p>
-        </div>
-        <div class="col-xs-5 align carre">
-            <img src="{{ asset('images/lovefooter-01.png') }}" class="img-responsive imgCarre center-block">
-            <p class="titreBouton">Mes favoris</p>
-        </div>
-    </div>
-</div>
 {% endblock %}
