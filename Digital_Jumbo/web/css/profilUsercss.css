@@ -1,6 +1,7 @@
 .imgProfilUser {
     width: 40%;
     margin-bottom: 5%;
+    padding-top: 20px;
 }
 
 body {
@@ -63,5 +64,6 @@ body {
 }
 
 .logo-accueil{
+    margin-top: 40%;
 
 }
