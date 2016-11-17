@@ -34,4 +34,20 @@ class DefaultController extends Controller
     {
         return $this->render('FrontBundle:Default:profilUser.html.twig');
     }
+
+    /**
+     * @Route("/reservation", name="resa")
+     */
+    public function reservationAction()
+    {
+        return $this->render('FrontBundle:Default:formresa.html.twig');
+    }
+
+    /**
+     * @Route("/map", name="mapgeo")
+     */
+    public function geolocAction()
+    {
+        return $this->render('FrontBundle:Default:geolocation.html.twig');
+    }
 }

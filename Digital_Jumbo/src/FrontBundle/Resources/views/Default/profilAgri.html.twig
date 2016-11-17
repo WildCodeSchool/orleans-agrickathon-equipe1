@@ -7,27 +7,27 @@
             <img src="{{ asset('images/jeancharles.png') }}" class="img-responsive imgProfilUser center-block">
         </div>
         <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-
+            <img src="{{ asset('images/infos_agri.png') }}" class="img-responsive imgProfilUser center-block">
         </div>
     </div>
 </div>
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-            <a href="#">L'activité</a>
+            <a href="#acti">L'activité</a>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-            <a href="#">Agriculteur</a>
+            <a href="#agri">Agriculteur</a>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-            <a href="#">Maps</a>
+            <a href="#maps">Maps</a>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
-            <a href="">Avis</a>
+            <a href="#avis">Avis</a>
         </div>
     </div>
 </div>
-<div class="container-fluid">
+<div class="container-fluid" id="acti">
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <h2>La ferme des Petits Veaux</h2>
@@ -120,15 +120,31 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-8">
-                <p>Visite des batiments et traite des vaches</p>
+                <p>Visite des batiments</p>
             </div>
             <div class="col-xs-4">
-                <p>€€</p>
+                <p>Gratuit</p>
             </div>
         </div>
         <div class="row">
             <div class="col-xs-8">
-                <p>Visite des batiments et traite des vaches</p>
+                <p>Visite du parc matériel</p>
+            </div>
+            <div class="col-xs-4">
+                <p>Gratuit</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-8">
+                <p>Tour en tracteur</p>
+            </div>
+            <div class="col-xs-4">
+                <p>Gratuit</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-8">
+                <p>Traite</p>
             </div>
             <div class="col-xs-4">
                 <p>€€</p>
@@ -143,16 +159,16 @@
         </div>
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-
+                <img src="{{ asset('images/agenda.png') }}" class="img-responsive">
             </div>
         </div>
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bouton">
-                <button type="button" class="btn-lg btn-primary">Je reserve</button>
+                <a href="reservation"><button type="button" class="btn-lg btn-primary">Je reserve</button></a>
             </div>
         </div>
     </div>
-    <div class="container-fluid">
+    <div class="container-fluid" id="agri">
         <div class="row">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <h2>Jean-Charles</h2>
@@ -160,13 +176,13 @@
         </div>
         <div class="row">
             <div class="col-xs-4">
-                <h3>Transparence</h3>
+                <h3 class="text-center">Transparence</h3>
             </div>
             <div class="col-xs-4">
-                <h3>Proximité</h3>
+                <h3 class="text-center">Proximité</h3>
             </div>
             <div class="col-xs-4">
-                <h3>Partage</h3>
+                <h3 class="text-center">Partage</h3>
             </div>
         </div>
         <div class="row">
@@ -180,7 +196,7 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid">
+    <div class="container-fluid" id="maps">
         <div class="row">
             <div class="col-xs-12">
                 <h2>Map</h2>
