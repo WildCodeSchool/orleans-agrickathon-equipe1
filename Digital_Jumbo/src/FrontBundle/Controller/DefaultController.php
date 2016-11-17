@@ -8,7 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/")
+     * @Route("/", name="accueil")
      */
     public function indexAction()
     {
@@ -17,7 +17,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/profilAgri")
+     * @Route("/profilAgri", name="agri")
      */
     public function profilAgriAction()
     {
@@ -25,7 +25,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/profilUser")
+     * @Route("/profilUser", name="user")
      */
     public function profilUserAction()
     {
@@ -52,4 +52,13 @@ class DefaultController extends Controller
 
         return $this->render('FrontBundle:Default:geolocation.html.twig', array('locations'=>$locations));
     }
+
+    /**
+     * @Route("/profilval", name="profilval")
+     */
+    public function profilValAction()
+    {
+        return $this->render('FrontBundle:Default:profilvalerie.html.twig');
+    }
+
 }
