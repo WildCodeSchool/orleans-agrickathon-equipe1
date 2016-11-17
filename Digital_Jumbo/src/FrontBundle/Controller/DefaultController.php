@@ -45,6 +45,7 @@ class DefaultController extends Controller
      */
     public function geolocAction()
     {
+
         $em = $this->getDoctrine()->getManager();
 
         $locations = $em->getRepository('FrontBundle:Site')->findAll();

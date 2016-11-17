@@ -1,4 +1,8 @@
 {% extends 'layoutFormResa.html.twig' %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" type="text/css" href="{{  asset('css/profilUsercss.css')}}">
+{% endblock %}
 
 {% block formResa %}
     <div class="container">
@@ -47,4 +51,5 @@
              'moins de 24h.')">Reservé</button>
         </form>
     </div>
+
 {% endblock %}
