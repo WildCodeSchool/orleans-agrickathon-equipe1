@@ -48,6 +48,7 @@ class DefaultController extends Controller
      */
     public function geolocAction()
     {
+
         return $this->render('FrontBundle:Default:geolocation.html.twig');
     }
 }
