@@ -17,7 +17,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/profilAgri")
+     * @Route("/profilAgri", name="agri")
      */
     public function profilAgriAction()
     {
@@ -25,7 +25,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/profilUser")
+     * @Route("/profilUser", name="user")
      */
     public function profilUserAction()
     {
