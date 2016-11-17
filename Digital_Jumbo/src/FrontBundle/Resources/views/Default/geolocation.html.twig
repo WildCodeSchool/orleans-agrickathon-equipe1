@@ -5,12 +5,9 @@
 {% endblock %}
 {% block body %}
 
-<!-- Un élément HTML pour recueillir la carte -->
-
-
 <!-- Chargement de l'API Google maps -->
 <div class="container-fluid">
-    <div id="map" style="width:100%;height:40vw" class="img-responsive"></div>
+    <div id="map" style="width:100%;height:750px" class="img-responsive"></div>
 <script>
     // Note: This example requires that you consent to location sharing when
     // prompted by your browser. If you see the error "The Geolocation service
@@ -48,7 +45,7 @@
 
 
                     infowindow = new google.maps.InfoWindow({
-                        content: '<div id=infobulle>'+'<img src="{{ asset('images/test-01.png') }} class="img-responsive">'+'</div>',
+                        content: '<div id=infobulle>'+'<img src="{{ asset('images/map-agri.png') }}" class="img-responsive">'+'</div>',
 
                     });
 

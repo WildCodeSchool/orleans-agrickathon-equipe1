@@ -12,11 +12,8 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        $em = $this->getDoctrine()->getManager();
 
-        $locations = $em->getRepository('FrontBundle:Site')->findAll();
-
-        return $this->render('FrontBundle:Default:geolocation.html.twig', array('locations'=>$locations));
+        return $this->render('FrontBundle:Default:accueil.html.twig');
     }
 
     /**
@@ -48,7 +45,15 @@ class DefaultController extends Controller
      */
     public function geolocAction()
     {
+<<<<<<< HEAD
 
         return $this->render('FrontBundle:Default:geolocation.html.twig');
+=======
+        $em = $this->getDoctrine()->getManager();
+
+        $locations = $em->getRepository('FrontBundle:Site')->findAll();
+
+        return $this->render('FrontBundle:Default:geolocation.html.twig', array('locations'=>$locations));
+>>>>>>> 57230e9755aeea4a1fd793a2bebc8f94735f16d7
     }
 }
