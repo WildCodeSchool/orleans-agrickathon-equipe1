@@ -2,15 +2,18 @@
 {% block stylesheets %}
     {{ parent() }}
     <link rel="stylesheet" type="text/css" href="{{  asset('css/profilUsercss.css')}}">
+
 {% endblock %}
 
 {% block formResa %}
+ <div class="dateur">   <script>
+        $( function() {
+            $( "#datepicker" ).datepicker();
+        } );
+    </script>
+ </div>
     <div class="container-fluid">
-        <script>
-            $( function() {
-                $( "#datepicker" ).datepicker();
-            } );
-        </script>
+
         <form>
             <div class="form-group">
                 <label for="exampleInputDate">Date souhaitée</label><br/>
@@ -32,7 +35,7 @@
                 <input type="number" class="form-control" id="exampleInputChild" placeholder="3">
             </div>
             <button type="button" class="btn-lg btn-primary reservez" onclick="alert('Merci de votre reservation. Vous recevrez un mail de confirmation dans ' +
-             'moins de 24h.')">Reservez</button>
+             'moins de 24h.')">Réservez</button>
         </form>
     </div>
 
